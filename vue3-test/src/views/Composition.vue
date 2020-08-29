@@ -2,6 +2,9 @@
   <div>
     <button @click="add">test</button>
     <div>{{ state.data }}</div>
+    <div v-for="item in state.data" :key="item" class="item">
+      {{ item.id }}
+    </div>
     <Card />
   </div>
 </template>
@@ -13,12 +16,12 @@ import Card from "../components/Card.vue";
 
 export default {
   components: {
-    Card,
+    Card
   },
   setup() {
     const state = reactive({
       count: 0,
-      data: [],
+      data: []
     });
 
     function add() {
@@ -36,9 +39,9 @@ export default {
 
     return {
       state,
-      add,
+      add
     };
-  },
+  }
 };
 </script>
 
