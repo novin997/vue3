@@ -1,12 +1,12 @@
 <template>
   <v-carousel hide-delimiters cycle heigth="800">
-    <v-carousel-item 
-      v-for="(image, i) in state.images" 
+    <v-carousel-item
+      v-for="(image, i) in state.images"
       :key="i"
     >
-      <v-img :src="image.src">
+      <v-img height="100%" :src="image.src" position="top">
         <v-row class="fill-height" align="center" justify="center">
-          <div class="display-3 white--text">Hello</div>
+          <div class="display-3 black--text">Hello</div>
         </v-row>
       </v-img>
     </v-carousel-item>
@@ -25,11 +25,11 @@ export default defineComponent({
     const state = ref<object>({
       images: [
         {
-          src: require("../assets/K-On.jpg")
+          src: require("../assets/K-On.jpg"),
         },
       ],
     });
-    return {state};
+    return { state };
   },
 });
 </script>
