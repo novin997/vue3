@@ -1,14 +1,12 @@
 <template>
-    <div>This is AnimeList Page</div>
+  <div class="about">
+    <h1>This is an about page</h1>
+  </div>
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-    
-})
+import Vue from "vue";
+export default Vue.extend({});
 </script>

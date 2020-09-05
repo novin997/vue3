@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <v-carousel cycle heigth="400">
+    <v-carousel-item v-for="(slide, i) in state.slides" :key="i"></v-carousel-item>
+  </v-carousel>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+<style lang="scss"></style>
 
-@Component({
-  components: {
-    HelloWorld
-  }
-})
-export default class Home extends Vue {}
+<script lang="ts">
+import { ref, defineComponent } from "@vue/composition-api";
+
+export default defineComponent({
+  setup() {
+    const state = ref<object>({
+      slides: ["1", "2", "3", "4", "5"],
+    });
+
+    return {state};
+  },
+});
 </script>
